@@ -2,6 +2,8 @@
 using namespace std;
 
 // <-- ADD YOUR FUNCTION PROTOTYPE HERE
+void swap(int& first, int& second, int& third);
+
 
 int main()
 {
@@ -13,7 +15,7 @@ int main()
 
 
   // <-- ADD YOUR FUNCTION CALL HERE
-
+swap( red, green, blue);
 
   //DO NOT CHANGE WITHIN THIS AREA...
   cout<<"Rearranged....\n";
@@ -23,3 +25,44 @@ int main()
 }
 
 // <-- ADD YOUR FUNCTION DEFINITON HERE
+void swap(int& first, int& second, int& third)
+{
+        int temp;
+        int biggest, mid, least;
+         if( first < second && first > third)
+      {
+             biggest = first;
+             second = third;
+             second = biggest;
+      }
+      else if( first > second && first < third)
+      {
+              biggest = third;
+              third = second;
+              second = first;
+              first = biggest;
+      }
+        else if( first < second && second < third)
+        {
+           biggest = third;
+           third = first;
+           first = biggest;
+        }
+        else if ( first < third && third < second)
+        {
+                biggest = second;
+                second = third;
+                third = first;
+                first = biggest;
+        }
+
+}
+
+
+
+
+
+       
+
+
+
